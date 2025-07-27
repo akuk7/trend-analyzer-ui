@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Trend Analyzer UI
+
+A React application for analyzing trends across various topics using AI-powered insights.
+
+## Environment Setup
+
+Before running the application, you need to set up your backend URL:
+
+1. Create a `.env.local` file in the root directory
+2. Add your backend URL:
+   ```
+   REACT_APP_BACKEND_URL=https://your-backend-domain.com
+   ```
+3. Replace `https://your-backend-domain.com` with your actual hosted backend URL
+
+For local development, you can use:
+```
+REACT_APP_BACKEND_URL=http://127.0.0.1:8000
+```
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
