@@ -16,9 +16,9 @@ const TOPICS = [
 
 const LOADING_STAGES = [
   'Searching the web and sources…',
-  'Summarizing results…',
-  'Analyzing trends…',
-  'Finalizing report…',
+  'Gathering latest information…',
+  'Analyzing trends and patterns…',
+  'Finalizing comprehensive report…',
 ];
 
 export default function TrendAnalyzer() {
@@ -33,14 +33,26 @@ export default function TrendAnalyzer() {
 
   const startLoadingStages = () => {
     setStage(0);
-    intervalRef.current = setInterval(() => {
-      setStage((prev) => (prev + 1) % LOADING_STAGES.length);
-    }, 2000);
+    let currentStage = 0;
+    
+    const advanceStage = () => {
+      currentStage++;
+      if (currentStage < LOADING_STAGES.length) {
+        setStage(currentStage);
+        // Schedule next stage after 30 seconds
+        setTimeout(advanceStage, 30000);
+      } else {
+        // Stay on the last stage until result comes
+        setStage(LOADING_STAGES.length - 1);
+      }
+    };
+    
+    // Start the first stage transition after 30 seconds
+    setTimeout(advanceStage, 30000);
   };
 
   const stopLoadingStages = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = null;
+    // Clear any pending timeouts by setting a flag
     setStage(0);
   };
 
@@ -80,9 +92,9 @@ export default function TrendAnalyzer() {
 
   return (
     <div style={{ maxWidth: 900, margin: '40px auto', padding: 32, background: '#fff', borderRadius: 12, boxShadow: '0 2px 16px #e0e7ef' }}>
-      <h1 style={{ textAlign: 'center', fontSize: 36, marginBottom: 8, letterSpacing: 1 }}>Get the Latest News on These Hot Topics!</h1>
+      <h1 style={{ textAlign: 'center', fontSize: 36, marginBottom: 8, letterSpacing: 1 }}>Discover Today’s Top Trends</h1>
       <div style={{ textAlign: 'center', color: '#666', fontSize: 18, marginBottom: 32 }}>
-        Choose a topic to see the freshest trends, news, and analysis from top sources.
+      Click a topic to get curated news, updates, and expert takes.
       </div>
       <div style={{
         display: 'grid',
