@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/trend-analyzer-ui/static/css/main.e6c13ad2.css",
+    "main.js": "/trend-analyzer-ui/static/js/main.d8497b5c.js",
+    "static/js/453.220f53cb.chunk.js": "/trend-analyzer-ui/static/js/453.220f53cb.chunk.js",
+    "index.html": "/trend-analyzer-ui/index.html",
+    "main.e6c13ad2.css.map": "/trend-analyzer-ui/static/css/main.e6c13ad2.css.map",
+    "main.d8497b5c.js.map": "/trend-analyzer-ui/static/js/main.d8497b5c.js.map",
+    "453.220f53cb.chunk.js.map": "/trend-analyzer-ui/static/js/453.220f53cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.d8497b5c.js"
+  ]
+}
