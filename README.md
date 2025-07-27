@@ -18,6 +18,45 @@ For local development, you can use:
 REACT_APP_BACKEND_URL=http://127.0.0.1:8000
 ```
 
+## Deployment to GitHub Pages
+
+### Prerequisites
+- Your code must be pushed to a GitHub repository
+- The repository must be public (or you need GitHub Pro for private repos)
+
+### Setup Steps
+
+1. **Update the homepage URL** in `package.json`:
+   Replace `your-username` with your actual GitHub username:
+   ```json
+   "homepage": "https://your-username.github.io/trend-analyzer-ui"
+   ```
+
+2. **Set up environment variables for production**:
+   Create a `.env.production` file with your production backend URL:
+   ```
+   REACT_APP_BACKEND_URL=https://your-production-backend.com
+   ```
+
+3. **Deploy to GitHub Pages**:
+   ```bash
+   npm run deploy
+   ```
+
+4. **Configure GitHub Pages**:
+   - Go to your repository on GitHub
+   - Navigate to Settings → Pages
+   - Set Source to "Deploy from a branch"
+   - Select the `gh-pages` branch
+   - Save the settings
+
+Your app will be available at: `https://your-username.github.io/trend-analyzer-ui`
+
+### Important Notes
+- The first deployment may take a few minutes to become available
+- Make sure your backend CORS settings allow requests from your GitHub Pages domain
+- Update your backend URL in the production environment variable
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
